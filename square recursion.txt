@@ -1,0 +1,27 @@
+#include <stdio.h>
+  int power(int u,int v)
+  {
+      if(v==1)
+      return u;
+      else
+      return u*power(u,v-1);
+  }
+  int series(int x,int y)
+  {
+      if(y==1)
+      return;
+     int f=power(x,y);
+     return f+series(x,y-1);s
+     
+  }
+ int main() {
+     int x=2,n=3;
+     int q=series(x,n);
+     printf("%d",q);
+     
+    }
+    
+     
+ 
+    
+
