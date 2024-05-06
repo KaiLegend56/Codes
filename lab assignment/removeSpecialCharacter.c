@@ -9,18 +9,21 @@ int main(){
     printf("dma not allocated");
     else{
          printf("enter whole word");
-        scanf("%[^\n]%*c",p);
+        scanf("%s",p);
         
         for(i=0;*(p+i)!='\0';i++)
-       { for(j=0;*(p+j)!='\0';j++)
-        {
-            if(*(p+j)>=32&&*(p+j)<=64)
-           { 
-            *(p+j)=*(p+j+1);
-            
-           }
+        c++;
+        printf("%d",c);
+        for(i=0;*(p+i)!='\0';i++)
+        if(*(p+i)>=32&&*(p+i)<=64)
+        for(j=i;*(p+j)!='\0';i++)
+        { 
+          *(p+j)=*(p+j+1);
+          i--;    
         }
 
-        puts(p);
+        for(i=0;*(p+i)!='\0';i++)
+        printf("%c",*(p+i));
+        printf("end");
     }
 }

@@ -12,7 +12,9 @@ int main(){
         ch=getchar();
         putc(ch,p);
 
-        char ch1=getc()
+        rewind(p);
+        char ch1=getc(p);
+        printf("%c",ch1);
 
 
     }
