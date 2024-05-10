@@ -10,5 +10,8 @@ int main(){
        
        fputs(a,p);
 
+
     }
+    rewind(p);
+
     }
