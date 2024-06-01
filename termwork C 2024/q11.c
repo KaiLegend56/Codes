@@ -8,16 +8,21 @@ int main(){
     int i=1;
     fputs(a,p);
     char b[100];
+    int pos= ftell(p);
     rewind(p);
+    char ch;
     while (!feof(p))
     {
-        fscanf(p,"%s",b);
+        if(ftell(p)==pos)
+        break;
+        //fscanf(p,"%s",b);
+    
         printf("%s ",b);
         printf("%d",i);
         if(strcmp("a",b)==0||strcmp("an",b)==0||strcmp("the",b)==0)
         fputc(' ',q);
         else
-        fputs(b,q);
+        fprintf(q,"%s ",b);
        
         
         
