@@ -4,7 +4,11 @@ struct game{
     int price;
     int copiesSold;
 };
+struct game sort(struct game a){
+    return a;
+}
 int main(){
+    //struct game s1={"robber",45,78};
     struct game s[5],temp;
     for(int i=0;i<5;i++){
         scanf("%s",s[i].name);
@@ -23,6 +27,8 @@ int main(){
             }
         }
     }
+    struct game var=sort(s[1]);
+    
     printf("sorted \n");
     for(int i=0;i<5;i++){
         printf("%s %d %d\n",s[i].name,s[i].price,s[i].copiesSold);
