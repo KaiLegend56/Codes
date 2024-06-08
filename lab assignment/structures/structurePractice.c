@@ -20,7 +20,7 @@ struct car Car (struct car temp){
 }
 
 int main(){
-    FILE *p=fopen("structFIle.txt","wom");
+    FILE *p=fopen("structFIle.txt","w");
     
     struct car s;
     
